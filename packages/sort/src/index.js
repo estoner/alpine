@@ -1,4 +1,6 @@
-import Sortable from 'sortablejs'
+import { Sortable, MultiDrag } from 'sortablejs'
+
+Sortable.mount(new MultiDrag())
 
 export default function (Alpine) {
     Alpine.directive('sort', (el, { value, modifiers, expression }, { effect, evaluate, evaluateLater, cleanup }) => {
